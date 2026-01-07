@@ -16,7 +16,7 @@ $routes = [
     
     // produit
     ['GET', '/produit', [Mini\Controllers\ProduitController::class, 'liste']],
-    ['GET', '/produit', [Mini\Controllers\ProduitController::class, 'detail']],
+    ['GET', '/produit/detail', [Mini\Controllers\ProduitController::class, 'detail']],
     
     // Authentification
     ['GET', '/inscription', [Mini\Controllers\AuthController::class, 'inscription']],

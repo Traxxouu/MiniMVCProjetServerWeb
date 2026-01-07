@@ -18,7 +18,7 @@
     <h3>Nos produit</h3>
     <div class="products-grid">
         <?php foreach ($produit as $produit): ?>
-            <a href="/produit?id=<?= $produit['id'] ?>" class="product-card-hover">
+            <a href="/produit/detail?id=<?= $produit['id'] ?>" class="product-card-hover">
                 <div class="product-image">
                     <img src="/assets/images/<?= htmlspecialchars($produit['image_url']) ?>" 
                          alt="<?= htmlspecialchars($produit['nom']) ?>"
