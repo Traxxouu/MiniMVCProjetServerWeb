@@ -1,7 +1,7 @@
-<!-- Liste des produits -->
+<!-- Liste des produit -->
 <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-        <h2>Liste des produits</h2>
+        <h2>Liste des produit</h2>
         <a href="/products/create" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; display: inline-block;">
             ➕ Ajouter un produit
         </a>

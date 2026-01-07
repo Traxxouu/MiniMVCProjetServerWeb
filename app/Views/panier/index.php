@@ -16,7 +16,7 @@
     <div class="alert alert-warning">
         <p>Votre panier est vide.</p>
     </div>
-    <a href="/produits" class="btn btn-primary">Continuer mes achats</a>
+    <a href="/produit" class="btn btn-primary">Continuer mes achats</a>
 <?php else: ?>
     <table>
         <thead>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="cart-actions">
-        <a href="/produits" class="btn btn-secondary">Continuer mes achats</a>
+        <a href="/produit" class="btn btn-secondary">Continuer mes achats</a>
         
         <?php if (isset($_SESSION['utilisateur_id'])): ?>
             <a href="/commande/valider" class="btn btn-success">Valider ma commande</a>

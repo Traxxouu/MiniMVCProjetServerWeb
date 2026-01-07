@@ -14,7 +14,7 @@
         </div>
         <ul>
             <li><a href="/">Accueil</a></li>
-            <li><a href="/produits">Produits</a></li>
+            <li><a href="/produit">produit</a></li>
             <li><a href="/panier">Panier</a></li>
             <?php if (isset($_SESSION['utilisateur_id'])): ?>
                 <li>Bonjour <?= htmlspecialchars($_SESSION['utilisateur_nom']) ?></li>

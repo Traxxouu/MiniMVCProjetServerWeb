@@ -4,7 +4,7 @@
     <div class="alert alert-warning">
         <p>Vous n'avez pas encore passé de commande.</p>
     </div>
-    <a href="/produits" class="btn btn-primary">Découvrir nos produits</a>
+    <a href="/produit" class="btn btn-primary">Découvrir nos produit</a>
 <?php else: ?>
     <table>
         <thead>

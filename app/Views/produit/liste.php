@@ -1,13 +1,13 @@
-<h2>Tous nos produits</h2>
+<h2>Tous nos produit</h2>
 
 <div class="products-layout">
     <aside class="categories-sidebar">
         <h3>Catégories</h3>
         <ul>
-            <li><a href="/produits">Tous les produits</a></li>
+            <li><a href="/produit">Tous les produit</a></li>
             <?php foreach ($categories as $categorie): ?>
                 <li>
-                    <a href="/produits?categorie=<?= $categorie['id'] ?>">
+                    <a href="/produit?categorie=<?= $categorie['id'] ?>">
                         <?= htmlspecialchars($categorie['nom']) ?>
                     </a>
                 </li>
@@ -16,13 +16,13 @@
     </aside>
     
     <section>
-        <?php if (empty($produits)): ?>
+        <?php if (empty($produit)): ?>
             <div class="alert alert-warning">
                 <p>Aucun produit disponible dans cette catégorie.</p>
             </div>
         <?php else: ?>
             <div class="products-grid">
-                <?php foreach ($produits as $produit): ?>
+                <?php foreach ($produit as $produit): ?>
                     <a href="/produit?id=<?= $produit['id'] ?>" class="product-card-hover">
                         <div class="product-image">
                             <img src="/assets/images/<?= htmlspecialchars($produit['image_url']) ?>" 

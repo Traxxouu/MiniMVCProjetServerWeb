@@ -33,14 +33,14 @@ class Panier
         if ($utilisateur_id) {
             $sql = "SELECT pa.*, p.nom, p.prix, p.image_url 
                     FROM panier pa 
-                    JOIN produits p ON pa.produit_id = p.id 
+                    JOIN produit p ON pa.produit_id = p.id 
                     WHERE pa.utilisateur_id = ?";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$utilisateur_id]);
         } else {
             $sql = "SELECT pa.*, p.nom, p.prix, p.image_url 
                     FROM panier pa 
-                    JOIN produits p ON pa.produit_id = p.id 
+                    JOIN produit p ON pa.produit_id = p.id 
                     WHERE pa.session_id = ?";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$session_id]);

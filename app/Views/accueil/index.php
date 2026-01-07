@@ -7,7 +7,7 @@
     <h3>Nos catégories</h3>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
         <?php foreach ($categories as $categorie): ?>
-            <a href="/produits?categorie=<?= $categorie['id'] ?>" class="btn btn-secondary">
+            <a href="/produit?categorie=<?= $categorie['id'] ?>" class="btn btn-secondary">
                 <?= htmlspecialchars($categorie['nom']) ?>
             </a>
         <?php endforeach; ?>
@@ -15,9 +15,9 @@
 </section>
 
 <section>
-    <h3>Nos produits</h3>
+    <h3>Nos produit</h3>
     <div class="products-grid">
-        <?php foreach ($produits as $produit): ?>
+        <?php foreach ($produit as $produit): ?>
             <a href="/produit?id=<?= $produit['id'] ?>" class="product-card-hover">
                 <div class="product-image">
                     <img src="/assets/images/<?= htmlspecialchars($produit['image_url']) ?>" 

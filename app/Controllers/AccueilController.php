@@ -12,13 +12,13 @@ final class AccueilController extends Controller
 {
     public function index(): void
     {
-        // Récupère tous les produits et catégories
-        $produits = Produit::getAll();
+        // Récupère tous les produit et catégories
+        $produit = Produit::getAll();
         $categories = Categorie::getAll();
         
         $this->render('accueil/index', params: [
             'title' => 'Efrei Tech - Accueil',
-            'produits' => $produits,
+            'produit' => $produit,
             'categories' => $categories
         ]);
     }

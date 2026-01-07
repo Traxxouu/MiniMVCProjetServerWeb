@@ -31,12 +31,12 @@ class Produit
     public function getImageUrl() { return $this->image_url; }
     public function setImageUrl($image_url) { $this->image_url = $image_url; }
 
-    // Récupère tous les produits et leus categorie
+    // Récupère tous les produit et leus categorie
     public static function getAll()
     {
         $pdo = Database::getPDO();
         $sql = "SELECT p.*, c.nom as categorie_nom 
-                FROM produits p 
+                FROM produit p 
                 JOIN categories c ON p.categorie_id = c.id 
                 ORDER BY p.date_creation DESC";
         $stmt = $pdo->query($sql);
@@ -48,7 +48,7 @@ class Produit
     {
         $pdo = Database::getPDO();
         $sql = "SELECT p.*, c.nom as categorie_nom 
-                FROM produits p 
+                FROM produit p 
                 JOIN categories c ON p.categorie_id = c.id 
                 WHERE p.id = ?";
         $stmt = $pdo->prepare($sql);
@@ -56,12 +56,12 @@ class Produit
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Récupère les produits par catégorie
+    // Récupère les produit par catégorie
     public static function getByCategorie($categorie_id)
     {
         $pdo = Database::getPDO();
         $sql = "SELECT p.*, c.nom as categorie_nom 
-                FROM produits p 
+                FROM produit p 
                 JOIN categories c ON p.categorie_id = c.id 
                 WHERE p.categorie_id = ?
                 ORDER BY p.date_creation DESC";
@@ -73,7 +73,7 @@ class Produit
     public static function reduireStock($id, $quantite)
     {
         $pdo = Database::getPDO();
-        $stmt = $pdo->prepare("UPDATE produits SET stock = stock - ? WHERE id = ?");
+        $stmt = $pdo->prepare("UPDATE produit SET stock = stock - ? WHERE id = ?");
         return $stmt->execute([$quantite, $id]);
     }
 }

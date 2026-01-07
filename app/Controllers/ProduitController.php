@@ -10,22 +10,22 @@ use Mini\Models\Categorie;
 
 final class ProduitController extends Controller
 {
-    // Affiche la liste des produits
+    // Affiche la liste des produit
     public function liste(): void
     {
         $categorie_id = $_GET['categorie'] ?? null;
         
         if ($categorie_id) {
-            $produits = Produit::getByCategorie((int)$categorie_id);
+            $produit = Produit::getByCategorie((int)$categorie_id);
         } else {
-            $produits = Produit::getAll();
+            $produit = Produit::getAll();
         }
         
         $categories = Categorie::getAll();
         
         $this->render('produit/liste', params: [
-            'title' => 'Produits - Efrei Tech',
-            'produits' => $produits,
+            'title' => 'produit - Efrei Tech',
+            'produit' => $produit,
             'categories' => $categories
         ]);
     }
@@ -36,14 +36,14 @@ final class ProduitController extends Controller
         $id = $_GET['id'] ?? null;
         
         if (!$id) {
-            header('Location: /produits');
+            header('Location: /produit');
             exit;
         }
         
         $produit = Produit::findById((int)$id);
         
         if (!$produit) {
-            header('Location: /produits');
+            header('Location: /produit');
             exit;
         }
         

@@ -101,7 +101,7 @@
     </form>
     
     <div style="margin-top: 20px; display: flex; gap: 15px;">
-        <a href="/products" style="color: #007bff; text-decoration: none;">📋 Voir la liste des produits</a>
+        <a href="/products" style="color: #007bff; text-decoration: none;">📋 Voir la liste des produit</a>
         <span style="color: #ccc;">|</span>
         <a href="/" style="color: #007bff; text-decoration: none;">← Retour à l'accueil</a>
     </div>

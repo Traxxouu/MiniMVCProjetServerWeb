@@ -14,8 +14,8 @@ $routes = [
     // Accueil
     ['GET', '/', [Mini\Controllers\AccueilController::class, 'index']],
     
-    // Produits
-    ['GET', '/produits', [Mini\Controllers\ProduitController::class, 'liste']],
+    // produit
+    ['GET', '/produit', [Mini\Controllers\ProduitController::class, 'liste']],
     ['GET', '/produit', [Mini\Controllers\ProduitController::class, 'detail']],
     
     // Authentification

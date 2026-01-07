@@ -63,7 +63,7 @@ class Commande
         $pdo = Database::getPDO();
         $sql = "SELECT lc.*, p.nom, p.image_url 
                 FROM lignes_commande lc 
-                JOIN produits p ON lc.produit_id = p.id 
+                JOIN produit p ON lc.produit_id = p.id 
                 WHERE lc.commande_id = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$commande_id]);

@@ -13,12 +13,12 @@ final class ProductController extends Controller
 {
     public function listProducts(): void
     {
-        // Récupère tous les produits
+        // Récupère tous les produit
         $products = Product::getAll();
         
-        // Affiche la liste des produits
+        // Affiche la liste des produit
         $this->render('product/list-products', params: [
-            'title' => 'Liste des produits',
+            'title' => 'Liste des produit',
             'products' => $products
         ]);
     }

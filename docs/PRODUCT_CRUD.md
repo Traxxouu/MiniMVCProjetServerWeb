@@ -1,6 +1,6 @@
-# Guide de création : Gestion des Produits (CRUD)
+# Guide de création : Gestion des produit (CRUD)
 
-Ce document explique en détail comment créer un système complet de gestion de produits dans le framework Mini MVC, de la création de la table de base de données jusqu'aux vues.
+Ce document explique en détail comment créer un système complet de gestion de produit dans le framework Mini MVC, de la création de la table de base de données jusqu'aux vues.
 
 ## Table des matières
 
@@ -17,7 +17,7 @@ Ce document explique en détail comment créer un système complet de gestion de
 
 ### 1.1 Structure de la table
 
-La table `produit` stocke les informations des produits. Voici la structure SQL :
+La table `produit` stocke les informations des produit. Voici la structure SQL :
 
 ```sql
 CREATE TABLE produit (
@@ -116,7 +116,7 @@ public function setNom($nom)
 
 #### 2.1.4 Méthodes CRUD
 
-##### `getAll()` - Récupérer tous les produits
+##### `getAll()` - Récupérer tous les produit
 
 ```php
 public static function getAll()
@@ -128,7 +128,7 @@ public static function getAll()
 ```
 
 **Fonctionnalités :**
-- Récupère tous les produits de la base
+- Récupère tous les produit de la base
 - Trie par ID décroissant (plus récents en premier)
 - Retourne un tableau associatif
 
@@ -238,20 +238,20 @@ final class ProductController extends Controller
 ```php
 public function listProducts(): void
 {
-    // Récupère tous les produits
+    // Récupère tous les produit
     $products = Product::getAll();
     
-    // Affiche la liste des produits
+    // Affiche la liste des produit
     $this->render('product/list-products', params: [
-        'title' => 'Liste des produits',
+        'title' => 'Liste des produit',
         'products' => $products
     ]);
 }
 ```
 
 **Fonctionnalités :**
-- Récupère tous les produits via le modèle
-- Passe les produits à la vue `list-products`
+- Récupère tous les produit via le modèle
+- Passe les produit à la vue `list-products`
 - Définit le titre de la page
 
 #### 3.1.3 Méthode `showCreateProductForm()` - Afficher le formulaire
@@ -473,16 +473,16 @@ Si une URL d'image valide est fournie, on affiche un aperçu :
 
 ### 4.2 Vue : `app/Views/product/list-products.php`
 
-Cette vue affiche la liste de tous les produits.
+Cette vue affiche la liste de tous les produit.
 
 #### 4.2.1 Structure générale
 
 ```php
 <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-    <h2>Liste des produits</h2>
+    <h2>Liste des produit</h2>
     
     <!-- Bouton d'ajout -->
-    <!-- Liste des produits ou message vide -->
+    <!-- Liste des produit ou message vide -->
 </div>
 ```
 
@@ -551,7 +551,7 @@ Ajoutez les routes suivantes dans le tableau `$routes` :
 $routes = [
     // ... autres routes ...
     
-    // Routes pour les produits
+    // Routes pour les produit
     ['GET', '/products', [Mini\Controllers\ProductController::class, 'listProducts']],
     ['GET', '/products/create', [Mini\Controllers\ProductController::class, 'showCreateProductForm']],
     ['POST', '/products', [Mini\Controllers\ProductController::class, 'createProduct']],
@@ -562,7 +562,7 @@ $routes = [
 
 | Méthode | URL | Action | Description |
 |---------|-----|--------|-------------|
-| GET | `/products` | `listProducts()` | Affiche la liste des produits |
+| GET | `/products` | `listProducts()` | Affiche la liste des produit |
 | GET | `/products/create` | `showCreateProductForm()` | Affiche le formulaire de création |
 | POST | `/products` | `createProduct()` | Traite la soumission du formulaire |
 
@@ -586,7 +586,7 @@ mini_mvc/
 │   └── Views/
 │       └── product/
 │           ├── create-product.php   # Formulaire de création
-│           └── list-products.php   # Liste des produits
+│           └── list-products.php   # Liste des produit
 ├── public/
 │   └── index.php                    # Routes (à modifier)
 └── docs/
@@ -632,7 +632,7 @@ mini_mvc/
 
 ## Conclusion
 
-Ce guide vous a montré comment créer un système complet de gestion de produits en suivant l'architecture MVC. Chaque composant a un rôle précis :
+Ce guide vous a montré comment créer un système complet de gestion de produit en suivant l'architecture MVC. Chaque composant a un rôle précis :
 
 - **Modèle** : Gère les interactions avec la base de données
 - **Contrôleur** : Gère les requêtes HTTP et la validation

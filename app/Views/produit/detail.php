@@ -1,4 +1,4 @@
-<a href="/produits" class="back-link">← Retour aux produits</a>
+<a href="/produit" class="back-link">← Retour aux produit</a>
 
 <h2><?= htmlspecialchars($produit['nom']) ?></h2>
 
