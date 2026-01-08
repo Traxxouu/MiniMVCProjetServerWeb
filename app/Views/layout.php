@@ -32,7 +32,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Efrei Tech - Tous droits réservés</p>
+        <p>&copy; 2026 Efrei Tech - Tous droits réservés</p>
         <p><a href="https://maelbarbe.vercel.app" target="_blank">Mael Barbe B2 DEV</a></p>
     </footer>
 </body>
